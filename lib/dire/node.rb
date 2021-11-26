@@ -29,7 +29,7 @@ module Dire
 
     def parent
       Dire::Dir.new absolute_path.join('..'), root
-    rescue Error::InvalidPath
+    rescue Dire::Error::InvalidPath
       nil
     end
 
