@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.authors = ['Filip Pyda']
   spec.email   = ['filip.pyda@gmail.com']
 
-  spec.summary     = 'Filesystem Browser'
-  spec.description = 'Personal'
+  spec.summary     = 'File Browser'
+  spec.description = 'Pathname wrapper for safe and convenient filesystem traversal.'
   spec.homepage    = 'https://github.com/f6p/dire'
   spec.license     = 'MIT'
 
