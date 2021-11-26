@@ -16,8 +16,8 @@ class DireTest < Minitest::Test
   def test_root
     assert_instance_of Dire::Dir, Dire.root(directory)
 
-    assert_root_error 'files/hello.sh'
-    assert_root_error 'links/hello.sh'
+    assert_root_error 'files/dune.zip'
+    assert_root_error 'links/script.rb'
     assert_root_error 'non_existing_dir'
   end
 
