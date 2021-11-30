@@ -5,7 +5,7 @@ module Dire
     def binary?
       return @binary if @binary
 
-      unless %w(application text).include? mime.mediatype
+      unless %w(application text).include? mime&.mediatype
         return @binary = true
       end
 
