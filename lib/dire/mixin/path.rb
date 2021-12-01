@@ -3,6 +3,10 @@ module Dire::Mixin::Path
     path
   end
 
+  def name
+    absolute_path.basename.to_s
+  end
+
   def param
     relative_path.to_s
   end

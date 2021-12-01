@@ -7,6 +7,11 @@ class Dire::Mixin::PathTest < Minitest::Test
     assert_equal root.absolute_path.join('node'), node.absolute_path
   end
 
+  def test_name
+    assert_equal 'dune.zip',  files.get('dune.zip').name
+    assert_equal 'script.rb', files.get('script.rb').name
+  end
+
   def test_param
     assert_equal node.relative_path.to_s, node.param
   end
