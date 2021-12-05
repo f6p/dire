@@ -1,12 +1,12 @@
 module Dire
   class Dir < Node
-    @@invalid_link_handler = -> (nodes, path) {}
+    @@invalid_link_handler = -> (root, nodes, path) {}
 
     def self.invalid_link_handler= lambda
       @@invalid_link_handler = lambda
     end
 
-    @@invalid_path_handler = -> (nodes, path) {}
+    @@invalid_path_handler = -> (root, nodes, path) {}
 
     def self.invalid_path_handler= lambda
       @@invalid_path_handler = lambda
@@ -38,16 +38,16 @@ module Dire
       return @nodes if @nodes
 
       @nodes = absolute_path.glob '*', ::File::FNM_DOTMATCH
-      @nodes = @nodes.each_with_object(Array.new) do |node, nodes|
-        next if ignore? node
+      @nodes = @nodes.each_with_object(Array.new) do |path, nodes|
+        next if ignore? path
 
-        if absolute_path.to_s < node.to_s
+        if absolute_path.to_s < path.to_s
           begin
-            nodes.push get(node)
+            nodes.push get(path)
           rescue Dire::Error::InvalidLink
-            @@invalid_link_handler.(nodes, node)
+            @@invalid_link_handler.(root, nodes, path)
           rescue Dire::Error::InvalidPath
-            @@invalid_path_handler.(nodes, node)
+            @@invalid_path_handler.(root, nodes, path)
           end
         end
       end

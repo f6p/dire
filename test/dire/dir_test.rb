@@ -42,7 +42,7 @@ class Dire::DirTest < Minitest::Test
   def assert_invalid_link_handler &block
     msg = '.'
 
-    Dire::Dir.invalid_link_handler = -> (_, _) { print msg }
+    Dire::Dir.invalid_link_handler = -> (_, _, _) { print msg }
 
     assert_output(msg) { block.call }
   end
