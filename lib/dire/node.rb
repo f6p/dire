@@ -1,6 +1,6 @@
 module Dire
   class Node
-    include Mixin::Check, Mixin::Path, Mixin::Validity
+    include Module::Check, Module::Path, Module::Validity
 
     attr_reader :path, :root
 

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Dire::Mixin::PathTest < Minitest::Test
+class Dire::Module::PathTest < Minitest::Test
   def test_absolute_path
     assert node.absolute_path.absolute?
 

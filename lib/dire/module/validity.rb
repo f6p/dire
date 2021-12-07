@@ -1,4 +1,4 @@
-module Dire::Mixin::Validity
+module Dire::Module::Validity
   def validate!
     begin
       if ignore? path

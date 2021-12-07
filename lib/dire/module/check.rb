@@ -1,4 +1,4 @@
-module Dire::Mixin::Check
+module Dire::Module::Check
   def == other
     path.to_s == other.path.to_s
   end

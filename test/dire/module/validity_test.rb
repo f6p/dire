@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Dire::Mixin::ValidityTest < Minitest::Test
+class Dire::Module::ValidityTest < Minitest::Test
   def test_validate
     assert files.validate!
 

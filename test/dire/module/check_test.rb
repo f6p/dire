@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Dire::Mixin::CheckTest < Minitest::Test
+class Dire::Module::CheckTest < Minitest::Test
   def test_equal
     assert_equal node, node.dup
 

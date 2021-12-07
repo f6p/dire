@@ -1,4 +1,4 @@
-module Dire::Mixin::Path
+module Dire::Module::Path
   def absolute_path
     path
   end
