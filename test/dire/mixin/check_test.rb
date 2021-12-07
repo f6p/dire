@@ -24,10 +24,4 @@ class Dire::Mixin::CheckTest < Minitest::Test
   def test_root
     refute node.root?
   end
-
-  def test_validate
-    assert files.validate!
-
-    assert_raises(Dire::Error::InvalidPath) { other.validate! }
-  end
 end

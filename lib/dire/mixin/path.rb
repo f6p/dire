@@ -24,4 +24,14 @@ module Dire::Mixin::Path
   def expand pth
     path.join(pth).expand_path
   end
+
+  def ignore? path
+    Dire::IGNORE.any? do |ignore|
+      File.fnmatch? ignore, path, File::FNM_PATHNAME
+    end
+  end
+
+  def inside? path
+    expand(path).to_s.index(root.to_s) == 0
+  end
 end
