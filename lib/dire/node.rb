@@ -4,14 +4,14 @@ module Dire
 
     attr_reader :path, :root
 
-    def initialize node, root, validate = true
+    def initialize node, root, validate: true
       @path = str2abs node
       @root = plant root
 
       validate! if validate
     end
 
-    def get path, validate = true
+    def get path, validate: true
       path = expand path
       type = path.ftype rescue nil
 
@@ -23,7 +23,7 @@ module Dire
         else Other
       end
 
-      const.new path, root, validate
+      const.new path, root, validate: validate
     end
 
     def parent

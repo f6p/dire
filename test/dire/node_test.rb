@@ -5,7 +5,7 @@ class Dire::NodeTest < Minitest::Test
     assert_instance_of Dire::Dir,   files
     assert_instance_of Dire::File,  files.get('dune.zip')
     assert_instance_of Dire::Link,  links.get('readme')
-    assert_instance_of Dire::Other, root.get('missing', false)
+    assert_instance_of Dire::Other, root.get('missing', validate: false)
 
     assert_raises(Dire::Error::InvalidPath) { root.get 'missing' }
   end

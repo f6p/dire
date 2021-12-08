@@ -3,7 +3,7 @@ require 'test_helper'
 class Dire::LinkTest < Minitest::Test
   def test_broken
     path = links.path.join 'broken'
-    link = Dire::Link.new path, root.path, false
+    link = Dire::Link.new path, root.path, validate: false
 
     assert link.broken?
 

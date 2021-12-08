@@ -23,11 +23,11 @@ end
 def node name = 'node'
   path = root.path.join name
 
-  Dire::Node.new path, root.path, false
+  Dire::Node.new path, root.path, validate: false
 end
 
 def other name = 'other'
   path = root.path.join name
 
-  Dire::Other.new path, root.path, false
+  Dire::Other.new path, root.path, validate: false
 end
