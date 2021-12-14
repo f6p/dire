@@ -27,7 +27,7 @@ module Dire::Module::Path
 
   def ignore? path
     Dire::IGNORE.any? do |ignore|
-      File.fnmatch? ignore, path, File::FNM_PATHNAME
+      File.fnmatch? ignore, path, File::FNM_DOTMATCH | File::FNM_PATHNAME
     end
   end
 
