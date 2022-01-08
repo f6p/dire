@@ -15,6 +15,8 @@ class Dire::FileTest < Minitest::Test
     assert_equal 'application/x-ruby', mime.type
     assert_equal 'application', mime.mediatype
     assert_equal 'x-ruby', mime.subtype
+
+    refute files.get('empty').mime
   end
 
   def test_text
