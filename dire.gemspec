@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.license     = 'MIT'
 
   spec.add_dependency 'mimemagic', '~> 0.4.3'
-  spec.add_dependency 'zeitwerk',  '~> 2.5.1'
+  spec.add_dependency 'zeitwerk',  '~> 2.6.7'
 
   spec.add_development_dependency 'minitest', '~> 5.14.4'
 
