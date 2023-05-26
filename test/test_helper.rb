@@ -3,6 +3,7 @@ $LOAD_PATH.unshift path
 
 require 'minitest/autorun'
 require 'dire'
+require 'pathname'
 
 def directory
   File.join __dir__, 'root'

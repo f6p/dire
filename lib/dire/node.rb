@@ -1,3 +1,5 @@
+require 'pathname'
+
 module Dire
   class Node
     include Module::Check, Module::Path, Module::Validity
