@@ -36,7 +36,7 @@ class Dire::DirTest < Minitest::Test
   private
 
   def assert_items size, list
-    assert_equal size, list.send(:size)
+    assert_equal size, list.size
   end
 
   def assert_invalid_link_handler &block
